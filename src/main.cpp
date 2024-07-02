@@ -82,7 +82,8 @@ void loop()
 
   Serial.printf("%.2f A\n", current);
   Serial.printf("%.2f,%.5f\n", Wattage, Energy);
-
+  
+  //write to SD card every (delayTime)seconds
   if ((currentTime - previousTime) > delayTime)
   {
     myFile = SD.open("/PowerReadingsPROPER2.txt", FILE_APPEND);
